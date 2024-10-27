@@ -13,4 +13,6 @@ button {
   background: var(--button-bg-color);
   border-radius: 10px;
   padding: 0.25rem;
+  margin-left: auto;
+  font-size: 0.75rem;
 }

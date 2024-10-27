@@ -1,0 +1,19 @@
+.create {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+input {
+  border: none;
+  width: 100%;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+button {
+  all: unset;
+  background: var(--button-bg-color);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}

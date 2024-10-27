@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TaskProps } from '../../types/types';
 
 @Component({
   selector: 'app-task',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './task.component.css'
 })
 export class TaskComponent {
-  title: string = 'kk'
+  task: TaskProps | undefined
 }

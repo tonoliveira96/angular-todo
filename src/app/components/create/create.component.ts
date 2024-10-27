@@ -1,12 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { TaskProps } from '../../types/types';
 
 @Component({
   selector: 'app-create',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './create.component.html',
   styleUrl: './create.component.css'
 })
 export class CreateComponent {
+  task: string = "";
 
+  @Output() adicionarItem = new EventEmitter<TaskProps>();
+  
+  addItem(): void {
+    let item: TaskProps = {
+      completed: false,
+      title: this.task
+    }
+    this.adicionarItem.emit(item);
+    this.task = "";
+  }
 }

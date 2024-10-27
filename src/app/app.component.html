@@ -1,6 +1,18 @@
 <div class="content">
+
   <h1>Angular ToDo</h1>
-  <app-task title="Task1"></app-task>
-  <app-task title="Task2"></app-task>
+  <app-create (adicionarItem)="addToArray($event)"></app-create>
+  <hr />
+
+  @if(tasks.length > 0){
+    @for (item of tasks; track $index) {
+      <app-task task="item"/>
+    } 
+  } @else{
+    <div>
+      <p>Não existe nenhuma tarefa no momento.</p>
+    </div>
+    }
+
   <router-outlet />
 </div>

@@ -1,18 +1,21 @@
 <div class="content">
-
   <h1>Angular ToDo</h1>
   <app-create (adicionarItem)="addToArray($event)"></app-create>
+  <div id="info">
+    <span>Conluídos: {{ getDone() }}</span>
+    <span>Total: {{ getAmount() }}</span>
+  </div>
   <hr />
 
-  @if(tasks.length > 0){
+  @if(tasks.length > 0){ 
     @for (item of tasks; track $index) {
-      <app-task task="item"/>
+      <app-task [ngClass]="item.completed ? 'completed' : '' " [task]="item" [id]="$index" (deleteItem)="deleteTask($event)" (completeItem)="completeTask($event)" />
     } 
   } @else{
     <div>
       <p>Não existe nenhuma tarefa no momento.</p>
     </div>
-    }
+  }
 
   <router-outlet />
 </div>

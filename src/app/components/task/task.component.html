@@ -1,5 +1,5 @@
 <div class="task-box">
-  <input checked={{task?.completed}} type="checkbox" />
-  <p>{{ task?.title }}</p>
-  <button>Excluir</button>
+  <input [ngModel]="task.completed" (change)="complete()" type="checkbox" />
+  <p>{{ task.title }}</p>
+  <button (click)="delete()">Excluir</button>
 </div>

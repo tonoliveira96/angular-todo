@@ -17,8 +17,9 @@ export class CreateComponent {
   addItem(): void {
     let item: TaskProps = {
       completed: false,
-      title: this.task
+      title: this.task.trim()
     }
+    
     this.adicionarItem.emit(item);
     this.task = "";
   }

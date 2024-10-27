@@ -1,11 +1,13 @@
 .task-box {
   display: flex;
+  align-items: center;
   gap: 1rem;
   border: 1px solid var(--border-color);
   border-radius: 10px;
   padding: 0.25rem;
   margin: 0.5rem 0;
   background: var(--accent-color);
+  height: 2rem;
 }
 
 button {
@@ -23,6 +25,6 @@ button {
 }
 
 .not-completed {
-  text-decoration: none ;
+  text-decoration: none;
   opacity: 1;
 }

@@ -16,3 +16,13 @@ button {
   margin-left: auto;
   font-size: 0.75rem;
 }
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.not-completed {
+  text-decoration: none ;
+  opacity: 1;
+}

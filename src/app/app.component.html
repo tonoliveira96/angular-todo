@@ -9,7 +9,7 @@
 
   @if(tasks.length > 0){ 
     @for (item of tasks; track $index) {
-      <app-task [ngClass]="item.completed ? 'completed' : '' " [task]="item" [id]="$index" (deleteItem)="deleteTask($event)" (completeItem)="completeTask($event)" />
+      <app-task [task]="item" [id]="$index" (deleteItem)="deleteTask($event)" (completeItem)="completeTask($event)" />
     } 
   } @else{
     <div>

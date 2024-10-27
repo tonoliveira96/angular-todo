@@ -1,4 +1,4 @@
-<div class="task-box">
+<div [ngClass]="task.completed ? 'completed' : 'not-completed'" class="task-box">
   <input [ngModel]="task.completed" (change)="complete()" type="checkbox" />
   <p>{{ task.title }}</p>
   <button (click)="delete()">Excluir</button>

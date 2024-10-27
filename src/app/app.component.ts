@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CreateComponent } from './components/create/create.component';
@@ -8,7 +7,7 @@ import { TaskProps } from './types/types';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, TaskComponent, CreateComponent],
+  imports: [RouterOutlet, TaskComponent, CreateComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -21,7 +20,7 @@ export class AppComponent {
   }
 
   completeTask(id: number){
-    this.tasks[id].completed = true
+    this.tasks[id].completed = !this.tasks[id].completed
     console.log(this.tasks)
   }
 

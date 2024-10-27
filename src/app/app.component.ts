@@ -21,7 +21,6 @@ export class AppComponent {
 
   completeTask(id: number){
     this.tasks[id].completed = !this.tasks[id].completed
-    console.log(this.tasks)
   }
 
   deleteTask(id: number){

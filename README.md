@@ -1,6 +1,6 @@
 # AngularTodo
 
-[](./assets/angular-todo.gif)
+![](./assets/angular-todo.gif)
 Projeto usado para praticar sobre o Angular.
 
 Funcionalidades:
